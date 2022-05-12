@@ -72,7 +72,7 @@ export function AuthProvider(props:AuthProvider){
 
         setUser(user)
         
-        document.location.reload()
+        console.log(token)
     }
 
     async function guestIn(){
@@ -117,7 +117,7 @@ export function AuthProvider(props:AuthProvider){
             const[urlWithoutCode, urlCode] = url.split('?code=')
 
             window.history.pushState({},'', urlWithoutCode)
-            console.log(urlCode)
+            
             signIn(urlCode)
         }
     })
