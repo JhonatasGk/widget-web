@@ -30,7 +30,7 @@ export function FeedbackAuthScreenStep() {
                 dark:text-dark-text-primary text-light-text-primary flex flex-row items-center 
                 focus:ring-offset-2  focus:ring-offset-zinc-900 focus:ring-brand-500"
                 >
-                    <IoLogoGithub className="w-6 h-6 mr-4" />Entrar com Github
+                    <IoLogoGithub className="w-6 h-6 mr-4" />Entrar com GitHub
                 </a>
                 <button onClick={guestIn} className="text-xs dark:text-neutral-400 dark:hover:text-dark-text-primary text-light-text-secondary
             mt-2 hover:text-light-text-primary transition-colors">
