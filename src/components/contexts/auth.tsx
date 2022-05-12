@@ -72,7 +72,7 @@ export function AuthProvider(props:AuthProvider){
 
         setUser(user)
         
-        console.log(token)
+        console.log(response)
     }
 
     async function guestIn(){
