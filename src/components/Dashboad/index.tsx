@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { api } from "../../libs/api"
 import { AuthContext } from "../contexts/auth"
-import { ArrowsOutSimple, BookmarkSimple, Calendar, Timer } from 'phosphor-react'
+import { ArrowsClockwise, ArrowsOutSimple, BookmarkSimple, Calendar, Timer } from 'phosphor-react'
 import { Camera } from 'phosphor-react';
 import { Navigate} from "react-router-dom";
 
@@ -25,13 +25,13 @@ type User={
 
 export function Dashboard() {
 
-  const asToken=localStorage.getItem('@token:token')
+  /* const asToken=localStorage.getItem('@token:token')
 
   if (!asToken) {
     return <Navigate replace to="/" />
 
 
-  }
+  } */
 
   const user=useContext(AuthContext)
   const user_id=user.user?.id
@@ -67,11 +67,12 @@ useEffect(() => {
 
       <div className="mx-[150px] w-7/12 top-[20%] absolute  ">
         <div className="w-12/12  ">
-          <header className="w-12/12  h-[100px] rounded-t-md bg-brand-500 flex
-        flex-col justify-center ">
-            <span className="text-3xl ml-[15px]">Dashboard <button onClick={getFeedBacks}>red</button></span>
-            <span className="text-light-stroke ml-[15px]">Feedbacks enviados</span>
-
+          <header className="w-12/12  h-[100px] rounded-t-md bg-brand-500 grid auto-cols-auto grid-cols-2">
+            <div className="flex flex-col justify-center items-start ml-[15px]">
+              <span className="text-3xl ">Dashboard </span>
+              <span className="text-light-stroke ">Feedbacks enviados</span>
+            </div>
+            <button className="flex flex-col justify-center items-end mr-[30px]" title="atualizar" onClick={getFeedBacks}><ArrowsClockwise size={32} className="hover:text-dark-text-secondary transition-colors" /></button>
 
           </header>
           <div></div>
