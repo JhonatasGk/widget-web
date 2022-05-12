@@ -116,7 +116,7 @@ export function AuthProvider(props:AuthProvider){
         if(hasGitCode){
             const[urlWithoutCode, urlCode] = url.split('?code=')
 
-            window.history.pushState({},'', urlWithoutCode)
+            /* window.history.pushState({},'', urlWithoutCode) */
 
             signIn(urlCode)
         }
