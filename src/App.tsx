@@ -1,9 +1,13 @@
-import { Widget } from "./components/Widget";
+import {RoutesApp} from './routes'
 
 
 
-export function App() {
-  return <Widget/>
+function App() {
+  return (
+    <RoutesApp/>
+  )
  
 }
+
+export default App
 

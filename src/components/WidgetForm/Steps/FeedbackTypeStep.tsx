@@ -9,7 +9,7 @@ export function FeedbackTypeStep({onFeedbackTypeChanged}:FeedbackTypeStepProps )
     return (
         <>
         <header>
-            <span className="text-xl leading-6">Deixe seu feedback</span>
+            <span className="text-xl leading-6 dark:text-dark-text-primary text-light-text-primary">Deixe seu feedback</span>
             <CloseButton />
         </header>
         <div className="flex py-8  gap-2  w-full">
@@ -17,7 +17,9 @@ export function FeedbackTypeStep({onFeedbackTypeChanged}:FeedbackTypeStepProps )
             return (
                 <button
                 key={key} // unique ID to identify button within the array
-                className="bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex flex-col items-center
+                className="dark:bg-dark-surface-secondary bg-light-surface-secondary rounded-lg 
+                py-5 w-24 flex-1 flex flex-col items-center 
+                dark:text-dark-text-primary text-light-text-primary 
                 gap-2 border-2 border-transparent hover:border-brand-500 focus:border-brand-500
                 focus:outline-none"
                 onClick={() => onFeedbackTypeChanged(key as FeedbackType)} // arrow function, to pass the function instead of executing
