@@ -93,7 +93,7 @@ export function AuthProvider(props:AuthProvider){
     function signOut(){
         setUser(null)
         localStorage.removeItem('@token:token')
-        document.location.reload()
+        
     }
 
     useEffect(() => {
