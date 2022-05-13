@@ -1,9 +1,12 @@
 import { useContext, useEffect, useState } from "react"
 import { api } from "../../libs/api"
 import { AuthContext } from "../contexts/auth"
-import { ArrowsClockwise, ArrowsOutSimple, BookmarkSimple, Calendar, Timer } from 'phosphor-react'
+import { ArrowsClockwise, BookmarkSimple, Calendar, Timer } from 'phosphor-react'
 import { Camera } from 'phosphor-react';
-import { Navigate} from "react-router-dom";
+import {DialogScreenShot}  from './Steps/DashboardScreenshotModalStep'
+import { Popover } from "@headlessui/react";
+import { Navigate } from "react-router-dom";
+
 
 
 type Feedbacks={
@@ -25,13 +28,13 @@ type User={
 
 export function Dashboard() {
 
-  /* const asToken=localStorage.getItem('@token:token')
+  const asToken=localStorage.getItem('@token:token')
 
   if (!asToken) {
     return <Navigate replace to="/" />
 
 
-  } */
+  }
 
   const user=useContext(AuthContext)
   const user_id=user.user?.id
@@ -51,7 +54,7 @@ export function Dashboard() {
 
 useEffect(() => {
   getFeedBacks()
-})
+},[])
 
   return (
 
@@ -92,7 +95,7 @@ useEffect(() => {
                 return (
 
 
-                  <li key={feedback.id} className="w-11/12 h-[180px] dark:bg-dark-surface-secondary bg-light-surface-primary shadow-200 rounded-lg hover:scale-105">
+                  <li key={feedback.id} className="w-11/12 h-[180px] dark:bg-dark-surface-secondary bg-light-surface-primary shadow-200 rounded-lg hover:scale-[1.01] transition-all">
                     <header className="my-2 p-2 border-b ">
                       <span className="p-[22px] dark:text-dark-text-primary text-light-text-primary">ID: <span className="text-xs">{feedback.id}</span></span>
                     </header>
@@ -105,8 +108,18 @@ useEffect(() => {
                         <span className="flex flex-row items-center gap-[4px]" > <Timer size={18} />HORA: {H}h-{Mi}m</span>
                         <span className="flex flex-row items-center gap-[4px]" > <Camera size={18} />SCREENSHOT</span>
                         <span className="col-start-1 col-end-4 ">COMENTARIO: <p className="dark:bg-dark-surface-primary bg-light-surface-secondary h-14 mt-1 rounded-lg p-3">{feedback.comment}</p> </span>
+                        
+                        <Popover>
+                            <Popover.Panel>
+                              <DialogScreenShot screenshot={feedback.screenshot} />
+                            </Popover.Panel>
+                            <Popover.Button><img className="w-30  self-start justify-self-start h-20 rounded-xl" src={`${feedback.screenshot}`} alt="" /></Popover.Button>
+                        </Popover>
 
-                        <button title="click to expand" className="p-1 relative  border-none flex active:absolute active:justify-self-start active:scale-[3.1] "><img className="w-30  self-start justify-self-start h-20 rounded-xl" src={`${feedback.screenshot}`} alt="" /><ArrowsOutSimple size={24} className=" absolute self-end right-6 text-light-text-secondary justify-self-end " /></button>
+
+
+
+                       
                       </div>
 
                     </div>

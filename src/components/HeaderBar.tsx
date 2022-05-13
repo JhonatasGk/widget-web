@@ -23,7 +23,7 @@ const asToken = localStorage.getItem('@token:token')
                  <MenuDropDown/>
                 </Popover.Panel>
                 
-                <Popover.Button className="bg-brand-500 rounded-full px-1 h-12 text-white flex items-center group shadow-100 shadow-brand-500/25">
+                <Popover.Button className="bg-brand-500 rounded-full px-1 h-12 text-white flex items-center group ">
                 {!!asToken ? 
                  
                  <img src={user.user?.avatar_url} className=" w-10 h-10 rounded-full border-[2px] dark:border-dark-surface-secondary border-light-surface-secondary "/>

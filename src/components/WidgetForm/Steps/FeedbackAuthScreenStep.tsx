@@ -32,7 +32,7 @@ export function FeedbackAuthScreenStep() {
                 >
                     <IoLogoGithub className="w-6 h-6 mr-4" />Entrar com GitHub
                 </a>
-                <button onClick={guestIn} className="text-xs dark:text-neutral-400 dark:hover:text-dark-text-primary text-light-text-secondary
+                <button onClick={() => guestIn()} className="text-xs dark:text-neutral-400 dark:hover:text-dark-text-primary text-light-text-secondary
             mt-2 hover:text-light-text-primary transition-colors">
                     Continuar sem autenticação &gt; </button>
             </div>

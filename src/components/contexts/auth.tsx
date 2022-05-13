@@ -71,8 +71,8 @@ export function AuthProvider(props:AuthProvider){
         
 
         setUser(user)
+        document.location.reload()
         
-        console.log(response)
     }
 
     async function guestIn(){
@@ -80,8 +80,9 @@ export function AuthProvider(props:AuthProvider){
        const response = await api.get('guest');
 
        const user = response.data
-       
+        console.log(user)
         setUser(user)
+        
     }
 
    

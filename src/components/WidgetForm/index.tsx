@@ -83,8 +83,9 @@ export function WidgetForm() {
             )}
                
             <footer className="text-xs dark:text-neutral-400 text-light-text-secondary">
-                Feito com ♥ pelo <a className="underline underline-offset-2"
-                    href="https://www.instagram.com/grevinkart/">Grevinkart</a>
+            Made by  <a className="underline underline-offset-[3px]"
+                    href="https://github.com/JhonatasGk"  target="_blank">JhonatasGk.</a>       Base app <a className="underline underline-offset-[3px]"
+                    href="https://www.rocketseat.com.br/"  target="_blank">Rocketseat.</a> 
             </footer>
         </div>
     )
