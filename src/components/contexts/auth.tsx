@@ -93,10 +93,11 @@ export function AuthProvider(props:AuthProvider){
     function signOut(){
         setUser(null)
         localStorage.removeItem('@token:token')
-        
+        document.location.reload()
     }
 
     useEffect(() => {
+
         const token = localStorage.getItem('@token:token')
 
         if(token) {
