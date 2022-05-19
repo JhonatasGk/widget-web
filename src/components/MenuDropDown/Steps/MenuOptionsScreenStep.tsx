@@ -48,11 +48,11 @@ export function MenuOptionsScreenStep() {
                         
                         <SwitchModes />
                     </div>
-                    <Link to="/" onClick={signOut} className=" py-2 flex flex-row justify-start items-center dark:hover:bg-dark-stroke hover:bg-light-surface-secondary pl-2 transitions-colors focus:ring-2 focus:outline-none                
+                    <button  onClick={signOut} className=" py-2 flex flex-row justify-start items-center dark:hover:bg-dark-stroke hover:bg-light-surface-secondary pl-2 transitions-colors focus:ring-2 focus:outline-none                
                     focus:ring-offset-2  dark:focus:ring-offset-dark-surface-primary rounded-md focus:ring-brand-500">
                         <SignOut className="w-5 h-5"/>
                         <p className="pl-7">Sair</p>
-                    </Link>
+                    </button>
                 </div>
                 
                               
