@@ -94,8 +94,10 @@ export function AuthProvider(props:AuthProvider){
     function signOut(){
         setUser(null)
         localStorage.removeItem('@token:token')
-
-        return <Navigate replace to="/" />
+        document.location.reload()
+        return (
+        <Navigate replace to="/" />
+        )
 
     }
 
