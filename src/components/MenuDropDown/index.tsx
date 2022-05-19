@@ -13,7 +13,7 @@ export function MenuDropDown(){
         <div className="dark:bg-dark-surface-primary dark:text-dark-surface bg-light-surface-primary 
         text-light-text-primary relative rounded-lg  p-4 mb-4 flex flex-col items-center shadow-200
           w-[calc(100vw-2rem)] md:w-auto">
-            { !!asToken ? <MenuOptionsScreenStep/> : <MenuAuthScreenStep/>  }
+            { asToken ? <MenuOptionsScreenStep/> : <MenuAuthScreenStep/>  }
         </div>
     )
 }
