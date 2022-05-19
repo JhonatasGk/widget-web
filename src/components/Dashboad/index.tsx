@@ -107,7 +107,11 @@ useEffect(() => {
                         <span className="flex flex-row items-center gap-[4px]"> <Calendar size={18} />DATA: {D}/{Me}/{Y} </span>
                         <span className="flex flex-row items-center gap-[4px]" > <Timer size={18} />HORA: {H}h-{Mi}m</span>
                         <span className="flex flex-row items-center gap-[4px]" > <Camera size={18} />SCREENSHOT</span>
-                        <span className="col-start-1 col-end-4 ">COMENTARIO: <p className="dark:bg-dark-surface-primary bg-light-surface-secondary h-14 mt-1 rounded-lg p-3">{feedback.comment}</p> </span>
+                        <span className="col-start-1 col-end-4 ">COMENTARIO: <textarea className=" h-14 mt-1 rounded-lg p-3 text-sm dark:placeholder-dark-text-secondary 
+                        placeholder-light-text-secondary dark:text-dark-text-secondary text-light-text-secondary
+                        dark:border-dark-stroke border-light-stroke  bg-transparent rounded-md focus:border-x-brand-500 
+                        focus:ring-brand-500 focus:ring-1 resize-none focus:outline-none  dark:scrollbar-thumb-dark-stroke 
+                        scrollbar-thumb-light-stroke scrollbar-thin scrollbar-track-transparent" value={feedback.comment}></textarea> </span>
                         
                         <Popover>
                             <Popover.Panel>
