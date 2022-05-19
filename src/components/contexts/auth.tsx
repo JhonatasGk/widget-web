@@ -1,5 +1,6 @@
 import { CodesandboxLogo } from "phosphor-react";
 import { createContext, ReactNode, useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 import { api } from "../../libs/api";
 
 type User = {
@@ -93,7 +94,9 @@ export function AuthProvider(props:AuthProvider){
     function signOut(){
         setUser(null)
         localStorage.removeItem('@token:token')
-        document.location.reload()
+
+        return <Navigate replace to="/" />
+
     }
 
     useEffect(() => {
